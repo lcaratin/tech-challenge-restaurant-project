@@ -74,7 +74,3 @@ As principais bibliotecas e dependências do projeto são:
 A documentação da API pode ser acessada em `http://localhost:3000/api-docs`.
 
 ---
-
-## Coleção Postman
-
-Uma coleção do Postman com exemplos de solicitações para a API está disponível [aqui](https://api.postman.com/collections/8588306-910507ef-8d75-4359-8b00-43785098e8ee?access_key=).
