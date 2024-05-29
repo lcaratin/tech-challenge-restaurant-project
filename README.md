@@ -33,8 +33,11 @@ npm install
 
 ## Configuração e uso
 
-Após a instalação e configuração, você pode iniciar a aplicação usando o seguinte comando:
+O projeto está preparado com o arquivo `docker-compose.yml`, responsável por configurar um ambiente com dois serviços: **Aplicação NodeJS e Banco de dados MongoDB**.
 
+A build da **Aplicação NodeJS** está definida para utilizar a imagem Docker configurada no arquivo `Dockerfile` presente no repositório.
+
+Após a instalação e configuração, você pode iniciar a aplicação usando o seguinte comando:
 
 ```
 # Mover para pasta do projeto, a partir do root
@@ -44,7 +47,14 @@ cd tech-challenge-restaurant-project
 docker compose up -d
 ```
 
+Caso seja necessário iniciar **apenas a aplicação** fora do ambiente docker, basta utilizar o comando:
+```
+# Iniciar aplicação NodeJS
+npm run dev
+```
+
 A aplicação estará disponível em `http://localhost:3000 (Mapeamento 3000:3000)`.
+
 O banco de dados estará disponível `http://localhost:27017 (Mapeamento 27017:27017)`.
 
 ---
