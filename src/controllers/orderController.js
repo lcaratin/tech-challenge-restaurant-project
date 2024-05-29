@@ -1,5 +1,6 @@
 import Order from "../models/Order.js";
 import Product from "../models/Product.js";
+import Client from "../models/Client.js";
 
 class OrderController {
     // Método para buscar todos os pedidos
@@ -51,9 +52,17 @@ class OrderController {
     static create = async (req, res) => {
         const { client, products } = req.body;
 
+        if (client) {
+            const sClient = await Client.findById(client);;
+            if (!sClient) {
+                return res.status(500).json({ message: 'Client not found' });
+            }
+        }
+
         const allProducts = await Product.find({ _id: { $in: products.map(prod => prod.product) } });
 
         let totalPrice = 0;
+        let productNotFounded = false;
         products.forEach((item) => {
             let refProduct = allProducts.find(itProduct => itProduct._id == item.product);
 
@@ -62,7 +71,13 @@ class OrderController {
                 item.price = Number(price.toFixed(2));
                 totalPrice += item.price;
             }
+            else { productNotFounded = true; }
         });
+
+        if (productNotFounded) {
+            return res.status(500).json({ message: 'Product not found' });
+        }
+
         totalPrice = Number(totalPrice.toFixed(2));
 
         try {
