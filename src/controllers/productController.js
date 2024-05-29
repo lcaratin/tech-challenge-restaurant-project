@@ -40,7 +40,7 @@ class ProductController {
 
     static update = async (req, res) => {
         const { id } = req.params;
-        const { name, category, price, images } = req.body;
+        const { name, description, category, price, images } = req.body;
 
         try {
             const updatedProduct = await Product.findByIdAndUpdate(id, { name, category, price, description, images }, { new: true });
