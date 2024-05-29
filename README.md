@@ -10,8 +10,10 @@ Repositório referente ao projeto de Tech Challenge Fase 1
 3. [Stacks Utilizadas](#stacks-utilizadas)
 4. [Bibliotecas](#bibliotecas)
 5. [Swagger](#swagger)
+6. [Coleção Postman](#coleção-postman)
+7. [DDD - Dicionário de Linguagem Ubíqua](#dicionário-de-linguagem-ubíqua)
 6. [DDD - Event Storming](#ddd---event-storming)
-7. [Dicionário de Linguagem Ubíqua](#dicionário-de-linguagem-ubíqua)
+
 
 ---
 
@@ -72,11 +74,6 @@ A documentação da API pode ser acessada em `http://localhost:3000/api-docs`.
 ## Coleção Postman
 
 Uma coleção do Postman com exemplos de solicitações para a API está disponível [aqui](https://api.postman.com/collections/8588306-910507ef-8d75-4359-8b00-43785098e8ee?access_key=PMAT-01HZ0QKVX7S6TZDSRNQY86X5C1).
-
----
-## DDD - Event Storming
-
-O projeto foi desenvolvido com base nos princípios do Domain-Driven Design (DDD) e foi inicialmente mapeado através do Event Storming. Para visualizar o processo de Event Storming, acesse o [link do Miro](https://miro.com/app/board/uXjVKEK0ulQ=/?share_link_id=946525556601).
 
 ---
 
@@ -140,3 +137,9 @@ O projeto foi desenvolvido com base nos princípios do Domain-Driven Design (DDD
 **Definição**: Categoria de Produto que agrupa os Produtos do Tipo Sobremesa.
 
 ---
+
+
+## DDD - Event Storming
+
+O projeto foi desenvolvido com base nos princípios do Domain-Driven Design (DDD) e foi inicialmente mapeado através do Event Storming. Para visualizar o processo de Event Storming, acesse o [link do Miro](https://miro.com/app/board/uXjVKEK0ulQ=/?share_link_id=946525556601).
+
