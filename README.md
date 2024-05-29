@@ -22,7 +22,10 @@ Repositório referente ao projeto de Tech Challenge Fase 1
 Para instalar o projeto localmente, siga os passos abaixo:
 
 ```
+# Clonar repositório
 git clone <URL_DO_REPOSITÓRIO>
+
+# Instalar dependências via npm
 npm install
 ```
 
@@ -30,16 +33,19 @@ npm install
 
 ## Configuração e uso
 
-Antes de iniciar a aplicação, certifique-se de configurar as seguintes variáveis de ambiente:
-
-- `PORT`: Porta em que a aplicação será executada.
-- `MONGODB_URI`: URI de conexão com o banco de dados MongoDB.
-
 Após a instalação e configuração, você pode iniciar a aplicação usando o seguinte comando:
 
-~npm start
 
-A aplicação estará disponível em `http://localhost:<PORT>`.
+```
+# Mover para pasta do projeto, a partir do root
+cd tech-challenge-restaurant-project
+
+# Construir e iniciar os containers em segundo plano
+docker compose up -d
+```
+
+A aplicação estará disponível em `http://localhost:3000 (Mapeamento 3000:3000)`.
+O banco de dados estará disponível `http://localhost:27017 (Mapeamento 27017:27017)`.
 
 ---
 
